@@ -1,0 +1,12 @@
+﻿DBHelper.InsertBatch<RedisLog>(listRedisLog);
+
+批量转移数据(利用SqlBulkCopy实现快速大批量插入到指定的目的表及SqlDataAdapter的批量删除)
+
+ var srcsql = "  SELECT Name FROM  Src ";
+            var dessql = "";
+            List<SqlParameter> srcPrimarykeyParams = new List<SqlParameter>();
+            //srcPrimarykeyParams.Add(new SqlParameter("@ID", SqlDbType.Int, 50, "ID"));
+            srcPrimarykeyParams.Add(new SqlParameter("@Name", SqlDbType.VarChar, 50, "Name"));
+
+
+            DBHelper.BatchMoveData(srcsql, "Src", srcPrimarykeyParams, "", "Des");

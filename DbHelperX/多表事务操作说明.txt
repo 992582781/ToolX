@@ -1,0 +1,41 @@
+﻿public bool Add(List<Department> department, AuthResources authResources)
+        {
+            #region  事务：元组形式插入多条数据
+            var param = new List<Tuple<string, object>>();
+            Tuple<string, object> tupel;
+            var sw = new Stopwatch();
+            sw.Start();
+            for (int i = 0; i < 100; i++)
+            {
+                tupel = new Tuple<string, object>(@" INSERT INTO Department (ID,EID,Name,Remarks,Description,Notice,ParentId,AddTime,IsDel,UpdateTime) VALUES(@ID,@EID,@Name,@Remarks,@Description,@Notice,@ParentId,@AddTime,@IsDel,@UpdateTime) ", new
+                {
+                    ID = Guid.NewGuid(),
+                    EID = Guid.NewGuid(),
+                    Name = "部门",
+                    Remarks = "",
+                    Description = "",
+                    AddTime = DateTime.Now,
+                    IsDel = 0,
+                    UpdateTime = DateTime.Now,
+                    ParentId = Guid.NewGuid(),
+                    Notice = "",
+                });
+                param.Add(tupel);
+            }
+            tupel = new Tuple<string, object>(@" INSERT INTO AuthResources (ID,EID,AuthId,ResourceId,AddTime,IsDel,UpdateTime) VALUES(@ID,@EID,@AuthId,@ResourceId,@AddTime,@IsDel,@UpdateTime) ", new
+            {
+                ID = Guid.NewGuid(),
+                EId = Guid.NewGuid(),
+                AuthId = Guid.NewGuid(),
+                ResourceId = Guid.NewGuid(),
+                AddTime = DateTime.Now,
+                IsDel = 0,
+                UpdateTime = DateTime.Now,
+            });
+            param.Add(tupel);
+            //调用上面我们封装的事物方法：ExecuteTransaction
+            var result = DapperHelper.ExecuteTransaction(param).Item1; 
+            sw.Stop();
+            return result;
+            #endregion
+        }
