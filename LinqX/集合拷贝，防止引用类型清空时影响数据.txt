@@ -1,0 +1,16 @@
+﻿Dictionary<int, List<ComConfigDetail>> DicList = new Dictionary<int, List<ComConfigDetail>>();
+
+ foreach (var comConfigDetail in comConfigDetails)
+                {
+                    if (comConfigDetail.JudgeKey == 4)
+                    {
+                        listcomconfigdetail.Add(comConfigDetail);
+                        DicList.Add(ifnumber, listcomconfigdetail.GetRange(0, listcomconfigdetail.Count));//集合拷贝，防止引用类型清空时影响数据
+                        ifnumber = ifnumber + 1;
+                        listcomconfigdetail.Clear();
+                    }
+                    else
+                    {
+                        listcomconfigdetail.Add(comConfigDetail);
+                    }
+                }
