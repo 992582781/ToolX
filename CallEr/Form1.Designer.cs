@@ -30,13 +30,15 @@
         {
             this.EnumExtension = new System.Windows.Forms.Button();
             this.LinqEx = new System.Windows.Forms.Button();
+            this.async = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // EnumExtension
             // 
-            this.EnumExtension.Location = new System.Drawing.Point(2, 12);
+            this.EnumExtension.Location = new System.Drawing.Point(1, 8);
+            this.EnumExtension.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.EnumExtension.Name = "EnumExtension";
-            this.EnumExtension.Size = new System.Drawing.Size(141, 34);
+            this.EnumExtension.Size = new System.Drawing.Size(94, 23);
             this.EnumExtension.TabIndex = 0;
             this.EnumExtension.Text = "EnumExtension";
             this.EnumExtension.UseVisualStyleBackColor = true;
@@ -44,21 +46,34 @@
             // 
             // LinqEx
             // 
-            this.LinqEx.Location = new System.Drawing.Point(2, 68);
+            this.LinqEx.Location = new System.Drawing.Point(121, 8);
+            this.LinqEx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LinqEx.Name = "LinqEx";
-            this.LinqEx.Size = new System.Drawing.Size(142, 36);
+            this.LinqEx.Size = new System.Drawing.Size(95, 24);
             this.LinqEx.TabIndex = 1;
             this.LinqEx.Text = "LinqEx";
             this.LinqEx.UseVisualStyleBackColor = true;
             this.LinqEx.Click += new System.EventHandler(this.LinqEx_Click);
             // 
+            // async
+            // 
+            this.async.Location = new System.Drawing.Point(236, 9);
+            this.async.Name = "async";
+            this.async.Size = new System.Drawing.Size(85, 23);
+            this.async.TabIndex = 2;
+            this.async.Text = "async";
+            this.async.UseVisualStyleBackColor = true;
+            this.async.Click += new System.EventHandler(this.async_Click);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1038, 649);
+            this.ClientSize = new System.Drawing.Size(692, 433);
+            this.Controls.Add(this.async);
             this.Controls.Add(this.LinqEx);
             this.Controls.Add(this.EnumExtension);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -69,6 +84,7 @@
 
         private System.Windows.Forms.Button EnumExtension;
         private System.Windows.Forms.Button LinqEx;
+        private System.Windows.Forms.Button async;
     }
 }
 

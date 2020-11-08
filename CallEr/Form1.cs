@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -52,6 +53,26 @@ namespace CallEr
              query = list.DistinctBy(p => p.ID);
         }
 
+        private async void async_Click(object sender, EventArgs e)
+        {
+            Task<int> downloading = DownloadDocsMainPageAsync();
+            MessageBox.Show($" Launched downloading.");
+
+            int bytesLoaded = await downloading;//等待结果  
+            MessageBox.Show(bytesLoaded + " Downloaded  bytes.");
+        }
+
+
+        private static async Task<int> DownloadDocsMainPageAsync()
+        {
+            MessageBox.Show($"{nameof(DownloadDocsMainPageAsync)}: About to start downloading.");
+
+            var client = new HttpClient();
+            byte[] content = await client.GetByteArrayAsync("https://blog.csdn.net/");
+
+            MessageBox.Show($"{nameof(DownloadDocsMainPageAsync)}: Finished downloading.");
+            return content.Length;
+        }
     }
 
 
