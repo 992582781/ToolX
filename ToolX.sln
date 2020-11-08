@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoMapperX", "AutoMapperX\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CallBackX", "CallBackX\CallBackX.csproj", "{64E8320B-741B-498C-A1D8-0215FE2B3668}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeX", "TimeX\TimeX.csproj", "{6DB054DF-0CEB-4F33-8EF5-791F15A2A187}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{64E8320B-741B-498C-A1D8-0215FE2B3668}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64E8320B-741B-498C-A1D8-0215FE2B3668}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64E8320B-741B-498C-A1D8-0215FE2B3668}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DB054DF-0CEB-4F33-8EF5-791F15A2A187}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DB054DF-0CEB-4F33-8EF5-791F15A2A187}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DB054DF-0CEB-4F33-8EF5-791F15A2A187}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DB054DF-0CEB-4F33-8EF5-791F15A2A187}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
