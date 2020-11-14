@@ -90,6 +90,10 @@
       <Project>{2312fd4c-f322-4bfd-a64e-8320d1933c3f}</Project>
       <Name>LinqX</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Queue\Queue.csproj">
+      <Project>{A6C7DCD2-9BF8-4CD2-8791-2405DFA639EC}</Project>
+      <Name>Queue</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

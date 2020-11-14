@@ -31,12 +31,13 @@
             this.EnumExtension = new System.Windows.Forms.Button();
             this.LinqEx = new System.Windows.Forms.Button();
             this.async = new System.Windows.Forms.Button();
+            this.Queue = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // EnumExtension
             // 
             this.EnumExtension.Location = new System.Drawing.Point(1, 8);
-            this.EnumExtension.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EnumExtension.Margin = new System.Windows.Forms.Padding(2);
             this.EnumExtension.Name = "EnumExtension";
             this.EnumExtension.Size = new System.Drawing.Size(94, 23);
             this.EnumExtension.TabIndex = 0;
@@ -47,7 +48,7 @@
             // LinqEx
             // 
             this.LinqEx.Location = new System.Drawing.Point(121, 8);
-            this.LinqEx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LinqEx.Margin = new System.Windows.Forms.Padding(2);
             this.LinqEx.Name = "LinqEx";
             this.LinqEx.Size = new System.Drawing.Size(95, 24);
             this.LinqEx.TabIndex = 1;
@@ -65,15 +66,26 @@
             this.async.UseVisualStyleBackColor = true;
             this.async.Click += new System.EventHandler(this.async_Click);
             // 
+            // Queue
+            // 
+            this.Queue.Location = new System.Drawing.Point(337, 9);
+            this.Queue.Name = "Queue";
+            this.Queue.Size = new System.Drawing.Size(75, 23);
+            this.Queue.TabIndex = 3;
+            this.Queue.Text = "Queue";
+            this.Queue.UseVisualStyleBackColor = true;
+            this.Queue.Click += new System.EventHandler(this.Queue_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(692, 433);
+            this.Controls.Add(this.Queue);
             this.Controls.Add(this.async);
             this.Controls.Add(this.LinqEx);
             this.Controls.Add(this.EnumExtension);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -85,6 +97,7 @@
         private System.Windows.Forms.Button EnumExtension;
         private System.Windows.Forms.Button LinqEx;
         private System.Windows.Forms.Button async;
+        private System.Windows.Forms.Button Queue;
     }
 }
 

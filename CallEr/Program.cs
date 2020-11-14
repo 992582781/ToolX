@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Queue;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,6 +17,8 @@ namespace CallEr
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            OpreatQueue.queue.ProcessItemFunction += OpreatQueue.A;
+            OpreatQueue.queue.ProcessException += OpreatQueue.C; //new EventHandler<EventArgs<Exception>>(C);
             Application.Run(new Form1());
         }
     }

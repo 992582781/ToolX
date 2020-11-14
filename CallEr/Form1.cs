@@ -1,6 +1,7 @@
 ﻿using CallEr.Extension;
 using Extension;
 using LinqX;
+using Queue;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -72,6 +73,20 @@ namespace CallEr
 
             MessageBox.Show($"{nameof(DownloadDocsMainPageAsync)}: Finished downloading.");
             return content.Length;
+        }
+
+        private void Queue_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 50000; i++)
+            {
+                Task.Factory.StartNew((param) =>
+                {
+                    ComInfo info = new ComInfo();
+                    info.ComId = Guid.NewGuid().GetHashCode();
+                    info.InfoText = param.ToString();
+                    OpreatQueue.queue.Enqueue(info);
+                }, i);
+            }
         }
     }
 
