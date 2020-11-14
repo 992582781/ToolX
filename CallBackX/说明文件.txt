@@ -1,0 +1,5 @@
+﻿过程如下 :
+
+        ①:BeginInvoke方法启动异步调用 , 委托实例的方法 , 参数( n个回调参数 , 实例AsyncCallback , 委托实例本身 ) . 其中 : 关于AsyncCallback 的参数是有IAsyncResult的Function  
+
+        ②:EndInvoke检索异步调用的结果 , 就是得到委托运算的结果
