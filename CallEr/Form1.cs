@@ -1,4 +1,5 @@
-﻿using CallEr.Extension;
+﻿using CallBackX;
+using CallEr.Extension;
 using Extension;
 using LinqX;
 using Queue;
@@ -87,6 +88,12 @@ namespace CallEr
                     OpreatQueue.queue.Enqueue(info);
                 }, i);
             }
+        }
+
+        private void Callback_Click(object sender, EventArgs e)
+        {
+            CallBack.PostAsync(1,2);
+            new CallBack1().PostAsync(1, 2);
         }
     }
 

@@ -6,25 +6,25 @@ using System.Threading.Tasks;
 
 namespace CallBackX
 {
-    public class CallBack
+    public class CallBack1
     {
-        delegate int AsyncSum(int a, int b);
+        Func<int, int, int> caller;
 
-        public static void PostAsync(int a, int b)
+        public void PostAsync(int a, int b)
         {
-            AsyncSum caller = MySum;
+            caller = MySum;
             //FooCallBack,caller为额外的参数
             caller.BeginInvoke(a, b, FooCallBack, caller);   //第三个参数为回调  
 
         }
 
-        private static void FooCallBack(IAsyncResult ar)
+        private void FooCallBack(IAsyncResult ar)
         {
-            AsyncSum caller = (AsyncSum)ar.AsyncState; ;//获得BeginInvoke第4个参数
+            caller = (Func<int, int, int>)ar.AsyncState; ;//获得BeginInvoke第4个参数
             int number = caller.EndInvoke(ar);//获取运算的结果
         }
 
-        private static int MySum(int a, int b)
+        private int MySum(int a, int b)
         {
             int c = a + b;
             return c;

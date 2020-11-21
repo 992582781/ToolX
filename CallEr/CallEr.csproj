@@ -82,6 +82,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CallBackX\CallBackX.csproj">
+      <Project>{64e8320b-741b-498c-a1d8-0215fe2b3668}</Project>
+      <Name>CallBackX</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Extension\Extension.csproj">
       <Project>{34f95fe3-73fd-45f2-bd6b-dbdc5e6d3818}</Project>
       <Name>Extension</Name>
