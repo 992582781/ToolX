@@ -95,6 +95,13 @@ namespace CallEr
             CallBack.PostAsync(1,2);
             new CallBack1().PostAsync(1, 2);
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            string[] str = { "1", "2" };
+
+            int[] intlist = Array.ConvertAll(str, int.Parse);
+        }
     }
 
 
