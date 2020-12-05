@@ -164,6 +164,42 @@ namespace LinqX
             {
                 Console.WriteLine("Error -->>>:" + ex.ToString());
             }
+
+
+
+            try
+            {
+                var query =
+                   list.Where("Name == @0 and RqfMoney+1 == @1 and address.addr.Contains(@2) ", "张三", 26, "6").
+                   OrderBy("Month ,RqfMoney ").
+                   Select(string.Format("new ({0})", string.Join(",", DimensionList)));
+
+                query =
+                 list.Where("Name==\"张三\"" +
+                 "and RqfMoney+1 == 26 " +
+                 "and (Listfamily.Where(FamilyName == \"张4\").Count() > 0) ").
+                 OrderBy("Month ,RqfMoney ").
+                 Select(string.Format("new ({0})", string.Join(",", DimensionList)));
+
+                query =
+                  list.Where("Name ==@0 and RqfMoney+1 == @1  and address.addr.Contains(@2) and (Listfamily.Where(FamilyName == @3).Count() > 0) ",
+                "张三", 26, "6", "张4").
+                OrderBy("Month ,RqfMoney ").
+                Select(string.Format("new ({0})", string.Join(",", DimensionList)));
+
+                Console.WriteLine("query -->>>:" + query.ToString());
+
+                foreach (dynamic item in query)
+                {
+                    Console.WriteLine($"\t{item.Area},{item.Month}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error -->>>:" + ex.ToString());
+            }
+
+
             Console.Read();
         }
     }
