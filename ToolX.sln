@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queue", "Queue\Queue.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOS_Wopi", "OOS_Wopi\OOS_Wopi.csproj", "{3222B5E3-711A-4DFE-BAA1-1ECA810CE82A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessCmdX", "ProcessCmdX\ProcessCmdX.csproj", "{2BCFB9AF-2B49-443D-A5C7-164392515A6F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{3222B5E3-711A-4DFE-BAA1-1ECA810CE82A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3222B5E3-711A-4DFE-BAA1-1ECA810CE82A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3222B5E3-711A-4DFE-BAA1-1ECA810CE82A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BCFB9AF-2B49-443D-A5C7-164392515A6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BCFB9AF-2B49-443D-A5C7-164392515A6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BCFB9AF-2B49-443D-A5C7-164392515A6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BCFB9AF-2B49-443D-A5C7-164392515A6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
